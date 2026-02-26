@@ -1,0 +1,893 @@
+/* mulish-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/mulish-v18-latin-regular.woff2") format("woff2");
+}
+/* mulish-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/mulish-v18-latin-500.woff2") format("woff2");
+}
+/* mulish-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/mulish-v18-latin-600.woff2") format("woff2");
+}
+/* mulish-700 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/mulish-v18-latin-700.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/mulish-v18-latin-800.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/mulish-v18-latin-900.woff2") format("woff2");
+}
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --blue: #458ff6;
+  --gray: #7d7987;
+  --dark-blue: #1f1534;
+}
+::-webkit-scrollbar {
+  width: 0.45rem;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--gray);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--blue);
+  border-radius: 15px;
+}
+::selection {
+  background-color: var(--blue);
+  color: var(--white);
+}
+*,
+*::before,
+*::after {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  list-style-type: none;
+}
+a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  vertical-align: middle;
+}
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  height: 100%;
+  line-height: 1.5;
+  background-color: var(--white);
+  color: var(--black);
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+.mybutton {
+  background-color: inherit;
+  border: 2px solid var(--blue);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 50px;
+  border-radius: 55px;
+  color: var(--blue);
+  font-family: "Hind Madurai";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: 200ms ease all;
+}
+.mybutton:active {
+  transform: 200ms ease all;
+  opacity: 0.5;
+}
+
+.mybutton::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  border-radius: 55px;
+  z-index: -2;
+}
+.mybutton::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: var(--blue);
+  transition: all 0.3s;
+  z-index: -1;
+}
+.mybutton:hover {
+  color: #fff;
+  &:before {
+    width: 100%;
+  }
+}
+.container {
+  width: 100%;
+  max-width: 1366px;
+  padding: 0 0px;
+  margin: 0 auto;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+.header {
+  margin-top: 149px;
+  color: var(--white);
+}
+.header-title {
+  font-family: "Mulish";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: var(--black);
+  padding-top: 10px;
+}
+.headr-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header-link-logo {
+  transform: translateY(20px);
+  display: flex;
+  transition: 100ms ease all;
+}
+.header-link-logo:active {
+  transition: 100ms ease all;
+  opacity: 0.5;
+}
+.header-logo-image {
+  display: block;
+}
+.header-link-list {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: end;
+  align-items: end;
+}
+.header-links {
+  transition: 100ms ease all;
+}
+.header-links:active {
+  opacity: 0.5;
+  transition: 100ms ease all;
+}
+.header-links-texts {
+  opacity: 50%;
+  color: var(--dark-blue);
+  font-family: "Mulish";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  transition: 250ms ease all;
+}
+.header-links-texts:hover {
+  color: var(--blue);
+  transition: 250ms ease all;
+  transform: translate(2px, -2px);
+}
+.hero {
+  padding-top: 40px;
+  background-color: var(--white);
+}
+.hero-title::after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  bottom: 0;
+  top: -40px;
+  left: -150px;
+  width: 132px;
+  height: 115px;
+  background-image: url("./icons/element-hero.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hero-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero-left-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+.hero-title {
+  align-items: center;
+  position: relative;
+  color: var(--black);
+  width: 427px;
+  font-family: "Mulish";
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: 0%;
+}
+.hero-text {
+  padding-top: 25px;
+  width: 445px;
+  color: var(--gray);
+  font-family: "Mulish";
+  font-weight: 300;
+  font-size: 21px;
+  line-height: 32px;
+  letter-spacing: 0%;
+}
+.hero-button {
+  margin-top: 47px;
+  font-family: "Mulish";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0%;
+}
+.servic {
+  max-width: 1390px;
+  margin: 0 auto;
+  width: 952px;
+  height: 177px;
+  margin-top: 200px;
+  left: 0px;
+}
+.servic-img {
+  width: 56px;
+  height: 2px;
+  border-radius: 5px;
+  color: var(--black);
+}
+.servic-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+.servic-title {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 212px;
+  font-family: "Mulish";
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 56px;
+  letter-spacing: 0%;
+  color: var(--black);
+}
+.servic-text {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-family: "Mulish";
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0%;
+  width: 952px;
+  color: var(--gray);
+}
+.card {
+  margin-top: 67px;
+}
+.card-container::after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  bottom: 0;
+  top: -300px;
+  transform: translateX(-305px);
+  width: 853px;
+  height: 968px;
+  background-image: url("./icons/logotip.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  justify-content: start;
+}
+.card-container {
+  position: relative;
+  gap: 34px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.card-boxes {
+  flex-wrap: wrap;
+  background-color: var(--white);
+  align-items: start;
+  width: 305px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow:
+    rgba(0, 0, 0, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border-radius: 35px;
+  transition: 200ms ease all;
+}
+.card-boxes:hover {
+  box-shadow:
+    rgba(11, 46, 220, 0.541) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  transition: 200ms ease all;
+}
+.card-titlse {
+  font-family: "Mulish";
+  width: 160px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 56px;
+  letter-spacing: 0%;
+  color: var(--black);
+}
+.card-texts {
+  width: 266px;
+  color: var(--gray);
+  font-family: "Mulish";
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0%;
+}
+
+.card2 {
+  margin-top: 37px;
+}
+.card2-container {
+  position: relative;
+  gap: 34px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.card2-container::after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  bottom: 0;
+  top: -80px;
+  transform: translateX(465px);
+  width: 132px;
+  height: 115px;
+  background-image: url("./icons/element-hero.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  justify-content: end;
+}
+.card2-boxes {
+  background-color: var(--white);
+  width: 305px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow:
+    rgba(0, 0, 0, 0.16) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border-radius: 35px;
+  transition: 200ms ease all;
+}
+.card2-boxes:hover {
+  box-shadow:
+    rgba(11, 46, 220, 0.541) 0px 3px 6px,
+    rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  transition: 200ms ease all;
+}
+.card2-titlse {
+  width: 182px;
+  align-items: start;
+  font-family: "Mulish";
+  width: 160px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 56px;
+  letter-spacing: 0%;
+  color: var(--black);
+}
+.card2-texts {
+  width: 267px;
+  color: var(--gray);
+  font-family: "Mulish";
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0%;
+}
+.wrap {
+  max-width: 1390px;
+  margin: 0 auto;
+  width: 200px;
+  height: 56px;
+  margin-top: -81px;
+}
+.wrap-container {
+  width: 200px;
+  height: 56px;
+}
+.button-wraper {
+  text-align: center;
+  margin-top: 40px;
+  width: 200px;
+  height: 56px;
+}
+.learn-button {
+  display: block;
+  margin: 40px auto;
+  align-items: center;
+  font-family: "Mulish";
+  width: 200px;
+  top: 150px;
+  height: 56px;
+}
+.leading-image {
+  display: flex;
+  flex-direction: row;
+}
+.leading-icon {
+  color: var(--black);
+  margin-top: 20px;
+  width: 56px;
+  height: 2px;
+  border-radius: 10px;
+}
+.leading {
+  display: flex;
+  margin-top: 350px;
+}
+.leading-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.leading-left-box {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+.leading-title {
+  font-family: "Mulish";
+  color: var(--black);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 56px;
+  letter-spacing: 0%;
+  width: 481px;
+}
+.leading-text {
+  margin-top: 20px;
+  font-family: "Mulish";
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0%;
+  color: var(--gray);
+  width: 450px;
+}
+.leading-boxes {
+  margin-left: 137px;
+  align-items: end;
+  margin-top: 70px;
+  flex-direction: row;
+}
+
+.leading-button {
+  font-family: "Mulish";
+  margin-top: 37px;
+}
+.dowloand {
+  margin-top: 229px;
+}
+.dowloand-container {
+  position: relative;
+}
+.dowloand-container::after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  bottom: 0;
+  top: -120px;
+  right: -50px;
+  width: 132px;
+  height: 115px;
+  background-image: url("./icons/element-hero.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+.dowloand-right-box {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  flex-direction: row;
+}
+.dowloand-boxes {
+  flex-direction: row;
+  margin-right: 71px;
+}
+.dowloand-title {
+  width: 254px;
+  font-family: "Mulish";
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  letter-spacing: 0%;
+  color: var(--black);
+}
+.dowloand-icon {
+  color: var(--black);
+  width: 56px;
+  height: 2px;
+  border-radius: 10px;
+}
+.dowloand-text {
+  padding-top: 20px;
+  width: 420px;
+  font-family: "Mulish";
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0%;
+  color: var(--gray);
+}
+.downloand-button {
+  font-family: "Mulish";
+  margin-top: 20px;
+}
+.articl {
+  position: relative;
+  max-width: 1390px;
+  margin: 0 auto;
+  justify-content: start;
+}
+.box-articl {
+  display: flex;
+  margin-top: 79px;
+  gap: 34px;
+  justify-content: center;
+}
+.articl-container {
+  position: relative;
+  flex-direction: row;
+}
+.articl-container::after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  bottom: 0;
+  top: -60px;
+  right: -150px;
+  width: 537px;
+  height: 792px;
+  background-image: url("./icons/element2.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  justify-content: end;
+}
+.articl::after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  bottom: 0;
+  top: 110px;
+  transform: translateX(90px);
+  width: 132px;
+  height: 115px;
+  background-image: url("./icons/element-hero.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  justify-content: end;
+}
+.articl-box {
+  margin-top: 225px;
+  align-items: center;
+  margin-left: 500px;
+}
+.articl-title {
+  font-family: "Mulish";
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 56px;
+  letter-spacing: 0%;
+  color: var(--black);
+  width: 462px;
+}
+.articl-icons {
+  color: var(--black);
+  width: 56px;
+  height: 2px;
+  border-radius: 10px;
+  margin-left: 190px;
+}
+.articl-boxes {
+  position: relative;
+  width: 351px;
+  height: 512px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  transition: 250ms ease all;
+  border-radius: 35px;
+  flex-direction: row;
+  padding: 33px, 340px, 51px, 81px;
+  align-items: center;
+  background-color: var(--white);
+}
+.articl-boxes:hover {
+  box-shadow: rgba(2, 25, 99, 0.863) 0px 4px 12px;
+  transition: 250ms ease all;
+}
+.articl-images {
+  border-radius: 25px;
+  padding-left: -15px;
+}
+
+.articl-titles {
+  font-family: "Mulish";
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 32px;
+  letter-spacing: 0%;
+  color: var(--black);
+  width: 370px;
+  padding-left: 33px;
+  padding-right: 66px;
+}
+.articl-texts {
+  padding: 33px, 340px, 51px, 81px;
+  font-family: "Mulish";
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0%;
+  color: var(--gray);
+  width: 370px;
+  padding-right: 55px;
+  padding-left: 33px;
+}
+.articl-link {
+  padding-right: 51px;
+  padding-left: 33px;
+  top: 5048px;
+  color: var(--blue);
+}
+.artical-button {
+  font-family: "Mulish";
+}
+.artical-box-button {
+  justify-content: center;
+  align-items: center;
+  margin-left: 630px;
+  margin-top: 72px;
+}
+.footer {
+  padding-top: 80px;
+  padding-bottom: 114px;
+  background: linear-gradient(316deg, #67c3f3 0%, #5a98f2 100%);
+  margin-top: 199px;
+     position: relative;
+}
+.footer::after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  bottom: 0;
+  top: -80px;
+  right: 60px;
+  width: 132px;
+  height: 115px;
+  background-image: url("./icons/element-hero.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+.footer-link-logo {
+  display: flex;
+  color: var(--white);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.footer-title {
+  padding-top: 10px;
+}
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+  text-align: start;
+}
+.footer-left-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.footer-logo-link {
+  transition: 350ms ease all;
+}
+.footer-logo-link::active {
+  transition: 350ms ease all;
+  opacity: 0.5;
+}
+.footer-logo-image {
+  vertical-align: middle;
+}
+.footer-text {
+  width: 337px;
+  font-family: "Mulish";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: 1%;
+  color: var(--white);
+  opacity: 70%;
+  margin-bottom: 25px;
+  margin-top: 15px;
+}
+.footer-follow-text {
+  font-family: "Mulish";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+.footer-follow-text::after{
+    position: absolute;
+  content: "";
+  display: inline-block;
+  bottom: 0;
+  top: 250px;
+  left: 5px;
+  width: 132px;
+  height: 115px;
+  background-image: url("./icons/element1.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+.footer-box-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  gap: 20px;
+}
+.footer-icon-links {
+  transition: 200ms ease all;
+}
+.footer-icon-links::active {
+  transition: 200ms ease all;
+  opacity: 0.5;
+}
+.footer-icon-image {
+  vertical-align: middle;
+}
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 10px;
+}
+.footer-links-texts {
+  font-family: "Mulish";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: var(--white);
+  opacity: 70%;
+  transition: 450ms ease all;
+  margin-bottom: 10px;
+}
+.footer-links-texts:hover {
+  transition: 450ms ease all;
+  transform: translate(2px, -2px);
+  opacity: 1;
+}
+.footer-lists-titles {
+  color: var(--white);
+  font-size: 20px;
+}
